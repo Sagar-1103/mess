@@ -3,12 +3,12 @@ import React, { Component } from 'react';
 import { View, Text, TextInput, StyleSheet } from 'react-native';
 
 // create a component
-const Login = ({navigation}) => {
+const Signup = ({navigation}) => {
     return (
         <View style={styles.container}>
         <View style={styles.container}>
             <Text style={styles.title}>
-                Login
+                Signup
             </Text>
               <Text>
               Email ID :
@@ -28,7 +28,7 @@ const Login = ({navigation}) => {
                 onChangeText={(text) => setPassword(text)}
             />
         </View>
-        <Text className="mb-4" >Don't have an account? <Text onPress={()=>navigation.navigate('Signup')}>Sign up</Text></Text>
+        <Text className="mb-4" >Already have an account? <Text onPress={()=>navigation.navigate('Login')}>Login</Text></Text>
       </View>
     );
 };
@@ -57,4 +57,4 @@ const styles = StyleSheet.create({
 });
 
 //make this component available to the app
-export default Login;
+export default Signup;
